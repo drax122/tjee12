@@ -7,7 +7,7 @@
         <jsp:include page="boostrap.jsp"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Druzyny i gracze</title>
-    </head>
+</head>
 
     <body>
     <nav class="navbar navbar-inverse">
@@ -26,5 +26,7 @@
         <h3> Witaj! <span class="label label-default"></span></h3>
         <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class="label label-default"></span></h3>
     <p><a class="btn btn-primary btn-lg" href="pokazWszystkieDruzyny.jsp" role="button">Kliknij tutaj</a></p>
+    <p><a class="btn btn-primary btn-lg" href="glosuj" role="button">Zagłosuj na najlepszą drużynę</a></p>
+
     </body>
 </html>

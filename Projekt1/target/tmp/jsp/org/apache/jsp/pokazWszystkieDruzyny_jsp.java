@@ -90,7 +90,6 @@ public final class pokazWszystkieDruzyny_jsp extends org.apache.jasper.runtime.H
       out.write("      </div><!-- /.container-fluid -->\r\n");
       out.write("    </nav>\r\n");
       out.write("\r\n");
-      out.write("\r\n");
       out.write("    <div class=\"row\">\r\n");
       out.write("                   ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
@@ -109,7 +108,7 @@ public final class pokazWszystkieDruzyny_jsp extends org.apache.jasper.runtime.H
       out.write("                    </div>\r\n");
       out.write("    </div>\r\n");
       out.write("    </body>\r\n");
-      out.write("    </html>");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

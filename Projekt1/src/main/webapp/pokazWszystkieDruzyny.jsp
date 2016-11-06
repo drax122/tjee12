@@ -27,7 +27,6 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-
     <div class="row">
                    <c:forEach items="${storage.All()}" var="druzyna">
                         <div class="col-md-3">
@@ -54,4 +53,4 @@
                     </div>
     </div>
     </body>
-    </html>
+</html>
