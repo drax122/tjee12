@@ -23,10 +23,11 @@
         </ul>
       </div><!-- /.container-fluid -->
     </nav>
+    <div class="container-fluid">
         <h3> Witaj! <span class="label label-default"></span></h3>
         <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class="label label-default"></span></h3>
     <p><a class="btn btn-primary btn-lg" href="pokazWszystkieDruzyny.jsp" role="button">Kliknij tutaj</a></p>
     <p><a class="btn btn-primary btn-lg" href="glosuj" role="button">Zagłosuj na najlepszą drużynę</a></p>
-
+    </div>
     </body>
 </html>
