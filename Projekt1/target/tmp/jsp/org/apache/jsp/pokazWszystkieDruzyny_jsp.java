@@ -81,7 +81,7 @@ public final class pokazWszystkieDruzyny_jsp extends org.apache.jasper.runtime.H
       out.write("        <!-- Brand and toggle get grouped for better mobile display -->\r\n");
       out.write("        <div class=\"navbar-header\">\r\n");
       out.write("          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\"></button>\r\n");
-      out.write("          <a class=\"navbar-brand\" href=\"#\">Drużyny i gracze</a>\r\n");
+      out.write("          <a class=\"navbar-brand\" href=\"index.jsp\">Drużyny i gracze</a>\r\n");
       out.write("        </div>\r\n");
       out.write("        <ul class=\"nav navbar-nav\">\r\n");
       out.write("           <li><a href=\"pokazWszystkieDruzyny.jsp\">Drużyny</a></li>\r\n");

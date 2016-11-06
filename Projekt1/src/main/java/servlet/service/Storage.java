@@ -5,10 +5,6 @@ import servlet.serv.Gracz;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * Created by draxeer on 2016-11-04.
- */
 public class Storage {
     private List<Druzyna> db = new ArrayList<Druzyna>();
 
@@ -27,12 +23,13 @@ public class Storage {
     public void usunGracza(int idDruzyna, int idGracz){
         db.get(idDruzyna).getListaGraczy().remove(idGracz);
     }
-    private Druzyna trolFunkcja(Druzyna d, String s){
+
+    private Druzyna Utworz(Druzyna d, String s){
 
         return new Druzyna(d.getNazwaDruzyny(),d.getmZalozyciel(),d.getLiczbaGraczy(),s);
     }
     public void updateDruzyna(int id, Druzyna d,String s){
-        Druzyna updated = trolFunkcja(d,s);
+        Druzyna updated = Utworz(d,s);
         updated.setListaGraczy(db.get(id).getListaGraczy());
         db.set(id,updated);
     }
