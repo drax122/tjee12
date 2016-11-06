@@ -5,14 +5,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Demo application</title>
+        <jsp:include page="boostrap.jsp"/>
+                <!-- Dorzucam grzecznie bootstrapa, bo lubie -->
+        <title>Druzyny i gracze</title>
     </head>
     <body>
-        <h2>No elo, witaj! :> Drużyny i staty mocno</h2>
-
-        <p><a href="dodaj_druzyne.jsp">Dodaj nową drużynę</a></p>
-        <p><a href="#">Dodaj nową drużynę</a></p>
-        <p><a href="#">Wyświetl drużyny i statystyki</a></p>
-
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></button>
+          <a class="navbar-brand" href="#">Drużyny i gracze</a>
+        </div>
+        <ul class="nav navbar-nav">
+           <li><a href="pokazWszystkieDruzyny.jsp">Drużyny</a></li>
+           <li><a href="getDruzynaData.jsp">Dodaj nową drużynę</a></li>
+        </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
+    <h3> Witaj! <span class="label label-default"></span></h3>
+    <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class="label label-default"></span></h3>
+    <p><a class="btn btn-primary btn-lg" href="pokazWszystkieDruzyny.jsp" role="button">Kliknij tutaj</a></p>
     </body>
+
+
+
 </html>

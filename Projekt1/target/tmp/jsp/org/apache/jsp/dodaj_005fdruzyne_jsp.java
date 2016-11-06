@@ -46,7 +46,7 @@ public final class dodaj_005fdruzyne_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("<title>Insert title here</title>\r\n");
+      out.write("<title>Dodawanie drużyny</title>\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
       out.write("<body>\r\n");
