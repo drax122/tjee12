@@ -4,11 +4,11 @@
 
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <jsp:include page="boostrap.jsp"/>
-                <!-- Dorzucam grzecznie bootstrapa, bo lubie -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Druzyny i gracze</title>
     </head>
+
     <body>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
@@ -23,11 +23,8 @@
         </ul>
       </div><!-- /.container-fluid -->
     </nav>
-    <h3> Witaj! <span class="label label-default"></span></h3>
-    <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class="label label-default"></span></h3>
+        <h3> Witaj! <span class="label label-default"></span></h3>
+        <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class="label label-default"></span></h3>
     <p><a class="btn btn-primary btn-lg" href="pokazWszystkieDruzyny.jsp" role="button">Kliknij tutaj</a></p>
     </body>
-
-
-
 </html>

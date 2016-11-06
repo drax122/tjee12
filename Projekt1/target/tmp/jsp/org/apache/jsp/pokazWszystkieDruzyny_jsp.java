@@ -75,7 +75,7 @@ public final class pokazWszystkieDruzyny_jsp extends org.apache.jasper.runtime.H
       out.write("\r\n");
       out.write("    <title>Druzyny i gracze</title>\r\n");
       out.write("</head>\r\n");
-      out.write("\r\n");
+      out.write("    <body>\r\n");
       out.write("    <nav class=\"navbar navbar-inverse\">\r\n");
       out.write("      <div class=\"container-fluid\">\r\n");
       out.write("        <!-- Brand and toggle get grouped for better mobile display -->\r\n");
@@ -96,19 +96,20 @@ public final class pokazWszystkieDruzyny_jsp extends org.apache.jasper.runtime.H
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
+      out.write("\r\n");
       out.write("                    <div class=\"col-md-3\">\r\n");
       out.write("                        <div class=\"thumbnail\">\r\n");
       out.write("                            <a href=\"getDruzynaData.jsp\">\r\n");
-      out.write("                                <img src=\"http://images.clipartbro.com/149/plus-sign-clip-art-vector-online-royalty-free-amp-amp-public-149927.svg\">\r\n");
+      out.write("                                <img src=\"http://images.clipartbro.com/149/plus-sign-clip-art-vector-online-royalty-free-amp-amp-public-149927.svg\" alt=\"dodajObrazek\">\r\n");
       out.write("                            </a>\r\n");
       out.write("                            <div class=\"caption\">\r\n");
-      out.write("                                <h3>Dodaj nową drużynę </h3>\r\n");
+      out.write("                                <p class=\"text-center\">Dodaj nową drużynę</p>\r\n");
       out.write("                            </div>\r\n");
-      out.write("                     </div>\r\n");
-      out.write("                     </div>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("    </div>");
+      out.write("                        </div>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    </body>\r\n");
+      out.write("    </html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -145,12 +146,12 @@ public final class pokazWszystkieDruzyny_jsp extends org.apache.jasper.runtime.H
           out.write("\">\r\n");
           out.write("                                <img src=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${druzyna.getImg()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\">\r\n");
+          out.write("\" alt=\"Logo\">\r\n");
           out.write("                            </a>\r\n");
           out.write("                            <div class=\"caption\">\r\n");
-          out.write("                                <h3><center>");
+          out.write("                                <p class=\"text-center\">");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${druzyna.getNazwaDruzyny()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</center></h3>\r\n");
+          out.write("</p>\r\n");
           out.write("                            </div>\r\n");
           out.write("                        </div>\r\n");
           out.write("                        </div>\r\n");

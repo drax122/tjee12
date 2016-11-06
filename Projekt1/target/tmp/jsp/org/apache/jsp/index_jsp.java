@@ -47,13 +47,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "boostrap.jsp", out, false);
       out.write("\r\n");
-      out.write("                <!-- Dorzucam grzecznie bootstrapa, bo lubie -->\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <title>Druzyny i gracze</title>\r\n");
       out.write("    </head>\r\n");
+      out.write("\r\n");
       out.write("    <body>\r\n");
       out.write("    <nav class=\"navbar navbar-inverse\">\r\n");
       out.write("      <div class=\"container-fluid\">\r\n");
@@ -68,13 +68,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </ul>\r\n");
       out.write("      </div><!-- /.container-fluid -->\r\n");
       out.write("    </nav>\r\n");
-      out.write("    <h3> Witaj! <span class=\"label label-default\"></span></h3>\r\n");
-      out.write("    <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class=\"label label-default\"></span></h3>\r\n");
+      out.write("        <h3> Witaj! <span class=\"label label-default\"></span></h3>\r\n");
+      out.write("        <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class=\"label label-default\"></span></h3>\r\n");
       out.write("    <p><a class=\"btn btn-primary btn-lg\" href=\"pokazWszystkieDruzyny.jsp\" role=\"button\">Kliknij tutaj</a></p>\r\n");
       out.write("    </body>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

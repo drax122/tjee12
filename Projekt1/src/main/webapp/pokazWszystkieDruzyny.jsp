@@ -12,7 +12,7 @@
     <jsp:include page="boostrap.jsp"/>
     <title>Druzyny i gracze</title>
 </head>
-
+    <body>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,24 +33,25 @@
                         <div class="col-md-3">
                         <div class="thumbnail">
                             <a href="DruzynaView.jsp?id=${storage.All().indexOf(druzyna)}">
-                                <img src="${druzyna.getImg()}">
+                                <img src="${druzyna.getImg()}" alt="Logo">
                             </a>
                             <div class="caption">
-                                <h3><center>${druzyna.getNazwaDruzyny()}</center></h3>
+                                <p class="text-center">${druzyna.getNazwaDruzyny()}</p>
                             </div>
                         </div>
                         </div>
                     </c:forEach>
+
                     <div class="col-md-3">
                         <div class="thumbnail">
                             <a href="getDruzynaData.jsp">
-                                <img src="http://images.clipartbro.com/149/plus-sign-clip-art-vector-online-royalty-free-amp-amp-public-149927.svg">
+                                <img src="http://images.clipartbro.com/149/plus-sign-clip-art-vector-online-royalty-free-amp-amp-public-149927.svg" alt="dodajObrazek">
                             </a>
                             <div class="caption">
-                                <h3>Dodaj nową drużynę </h3>
+                                <p class="text-center">Dodaj nową drużynę</p>
                             </div>
-                     </div>
-                     </div>
-
-
+                        </div>
+                    </div>
     </div>
+    </body>
+    </html>
