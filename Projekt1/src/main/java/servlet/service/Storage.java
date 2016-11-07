@@ -41,5 +41,10 @@ public class Storage {
     public List<Druzyna> pokazWszystkieDruzyny() {return db;}
     public List<Druzyna> All() {return db;}
 
-
+    @Override
+    public String toString() {
+        return "Storage{" +
+                "db=" + db +
+                '}';
+    }
 }

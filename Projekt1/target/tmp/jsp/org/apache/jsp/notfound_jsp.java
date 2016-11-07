@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class notfound_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -52,30 +52,28 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <title>Druzyny i gracze</title>\r\n");
-      out.write("</head>\r\n");
+      out.write("    </head>\r\n");
       out.write("\r\n");
-      out.write("    <body>\r\n");
-      out.write("    <nav class=\"navbar navbar-inverse\">\r\n");
-      out.write("      <div class=\"container-fluid\">\r\n");
-      out.write("        <!-- Brand and toggle get grouped for better mobile display -->\r\n");
-      out.write("        <div class=\"navbar-header\">\r\n");
-      out.write("          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\"></button>\r\n");
-      out.write("          <a class=\"navbar-brand\" href=\"#\">Drużyny i gracze</a>\r\n");
+      out.write("        <body>\r\n");
+      out.write("        <nav class=\"navbar navbar-inverse\">\r\n");
+      out.write("          <div class=\"container-fluid\">\r\n");
+      out.write("            <!-- Brand and toggle get grouped for better mobile display -->\r\n");
+      out.write("            <div class=\"navbar-header\">\r\n");
+      out.write("              <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\"></button>\r\n");
+      out.write("              <a class=\"navbar-brand\" href=\"#\">Drużyny i gracze</a>\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <ul class=\"nav navbar-nav\">\r\n");
+      out.write("               <li><a href=\"pokazWszystkieDruzyny.jsp\">Drużyny</a></li>\r\n");
+      out.write("               <li><a href=\"getDruzynaData.jsp\">Dodaj nową drużynę</a></li>\r\n");
+      out.write("            </ul>\r\n");
+      out.write("          </div><!-- /.container-fluid -->\r\n");
+      out.write("        </nav>\r\n");
+      out.write("        <div class=\"container-fluid\">\r\n");
+      out.write("            <h3> Nie znaleziono szukanej drużyny! <span class=\"label label-default\"></span></h3>\r\n");
+      out.write("            <a href='szukaj.jsp'>Spróbuj wyszkuać jeszcze raz! (CLICK) </a>\r\n");
       out.write("        </div>\r\n");
-      out.write("        <ul class=\"nav navbar-nav\">\r\n");
-      out.write("           <li><a href=\"pokazWszystkieDruzyny.jsp\">Drużyny</a></li>\r\n");
-      out.write("           <li><a href=\"getDruzynaData.jsp\">Dodaj nową drużynę</a></li>\r\n");
-      out.write("        </ul>\r\n");
-      out.write("      </div><!-- /.container-fluid -->\r\n");
-      out.write("    </nav>\r\n");
-      out.write("    <div class=\"container-fluid\">\r\n");
-      out.write("        <h3> Witaj! <span class=\"label label-default\"></span></h3>\r\n");
-      out.write("        <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class=\"label label-default\"></span></h3>\r\n");
-      out.write("    <p><a class=\"btn btn-primary btn-lg\" href=\"pokazWszystkieDruzyny.jsp\" role=\"button\">Kliknij tutaj</a></p>\r\n");
-      out.write("    <p><a class=\"btn btn-primary btn-lg\" href=\"szukaj.jsp\" role=\"button\">Wyszukaj drużynę (servlet) </a></p>\r\n");
-      out.write("    </div>\r\n");
-      out.write("    </body>\r\n");
-      out.write("</html>\r\n");
+      out.write("        </body>\r\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

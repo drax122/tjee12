@@ -3,8 +3,10 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import servlet.serv.Druzyna;
+import servlet.serv.Gracz;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class editGracz_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -42,25 +44,58 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\r\n");
       out.write("   \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
       out.write("\r\n");
+      servlet.service.Storage storage = null;
+      synchronized (application) {
+        storage = (servlet.service.Storage) _jspx_page_context.getAttribute("storage", PageContext.APPLICATION_SCOPE);
+        if (storage == null){
+          storage = new servlet.service.Storage();
+          _jspx_page_context.setAttribute("storage", storage, PageContext.APPLICATION_SCOPE);
+        }
+      }
+      out.write('\r');
+      out.write('\n');
+      servlet.serv.Druzyna druzyna = null;
+      synchronized (session) {
+        druzyna = (servlet.serv.Druzyna) _jspx_page_context.getAttribute("druzyna", PageContext.SESSION_SCOPE);
+        if (druzyna == null){
+          druzyna = new servlet.serv.Druzyna();
+          _jspx_page_context.setAttribute("druzyna", druzyna, PageContext.SESSION_SCOPE);
+        }
+      }
+      out.write("\r\n");
+      out.write("\r\n");
+
+    int idDruzyna = Integer.parseInt(request.getParameter("idDruzyna"));
+    int idGracz = Integer.parseInt(request.getParameter("idGracz"));
+
+    Druzyna d = storage.All().get(idDruzyna);
+    Gracz g = d.getListaGraczy().get(idGracz);
+    pageContext.setAttribute("d", d);
+
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "boostrap.jsp", out, false);
       out.write("\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("                <!-- bootstrap -->\r\n");
       out.write("        <title>Druzyny i gracze</title>\r\n");
-      out.write("</head>\r\n");
-      out.write("\r\n");
+      out.write("    </head>\r\n");
       out.write("    <body>\r\n");
+      out.write("\r\n");
       out.write("    <nav class=\"navbar navbar-inverse\">\r\n");
       out.write("      <div class=\"container-fluid\">\r\n");
       out.write("        <!-- Brand and toggle get grouped for better mobile display -->\r\n");
       out.write("        <div class=\"navbar-header\">\r\n");
       out.write("          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\"></button>\r\n");
-      out.write("          <a class=\"navbar-brand\" href=\"#\">Drużyny i gracze</a>\r\n");
+      out.write("          <a class=\"navbar-brand\" href=\"index.jsp\">Drużyny i gracze</a>\r\n");
       out.write("        </div>\r\n");
       out.write("        <ul class=\"nav navbar-nav\">\r\n");
       out.write("           <li><a href=\"pokazWszystkieDruzyny.jsp\">Drużyny</a></li>\r\n");
@@ -68,12 +103,36 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </ul>\r\n");
       out.write("      </div><!-- /.container-fluid -->\r\n");
       out.write("    </nav>\r\n");
-      out.write("    <div class=\"container-fluid\">\r\n");
-      out.write("        <h3> Witaj! <span class=\"label label-default\"></span></h3>\r\n");
-      out.write("        <h3> Przejdź prosto do spisu drużyn! Tu i tak nic nie ma :) <span class=\"label label-default\"></span></h3>\r\n");
-      out.write("    <p><a class=\"btn btn-primary btn-lg\" href=\"pokazWszystkieDruzyny.jsp\" role=\"button\">Kliknij tutaj</a></p>\r\n");
-      out.write("    <p><a class=\"btn btn-primary btn-lg\" href=\"szukaj.jsp\" role=\"button\">Wyszukaj drużynę (servlet) </a></p>\r\n");
-      out.write("    </div>\r\n");
+      out.write("\r\n");
+      out.write("    <form action=\"updateGracz.jsp?idDruzyna=");
+      out.print(idDruzyna);
+      out.write("&idGracz=");
+      out.print(idGracz);
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" name=\"idDruzyna\" value=\"");
+      out.print(idDruzyna);
+      out.write("\">\r\n");
+      out.write("        <input type=\"hidden\" name=\"idGracz\" value=\"");
+      out.print(idGracz);
+      out.write("\">\r\n");
+      out.write("        <div class=\"container-fluid\">\r\n");
+      out.write("        <div class=\"form-group\">\r\n");
+      out.write("           <label for=\"Nickname\">Nickname</label>\r\n");
+      out.write("           <input type=\"text\" class=\"form-control\" id=\"Nickname\" name=\"Nickname\" value=\"");
+      out.print(g.getNickname());
+      out.write("\">\r\n");
+      out.write("           <label for=\"Pensja\">Pensja</label>\r\n");
+      out.write("           <input type=\"text\" class=\"form-control\" id=\"Pensja\" name=\"Pensja\" value=\"");
+      out.print(g.getPensja());
+      out.write("\">\r\n");
+      out.write("           <label for=\"Dywizja\">Dywizja</label>\r\n");
+      out.write("           <input type=\"text\" class=\"form-control\" id=\"Dywizja\" name=\"Dywizja\" value=\"");
+      out.print(g.getDywizja());
+      out.write("\">\r\n");
+      out.write("        </div>\r\n");
+      out.write("           <button type=\"submit\" value=\"Edit\" class=\"btn btn-default\">Edytuj</button>\r\n");
+      out.write("        </div>\r\n");
+      out.write("     </form>\r\n");
       out.write("    </body>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {
