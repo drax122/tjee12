@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
@@ -29,7 +28,7 @@
 
      <h3>Dodaj nową drużynę!</h3>
      <div class="container-fluid">
-        <form action="addDruzyna.jsp">
+        <form action="addDruzyna">
 
           <div class="form-group">
             <label for="nazwaDruzyny">Nazwa drużyny</label>
@@ -49,7 +48,10 @@
           </div>
           <button type="submit" value="add" class="btn btn-default">Dodaj</button>
           </form>
-          <a href="pokazWszystkieDruzyny.jsp"><button class="btn btn-default">Powrót</button></a>
+          <form style="display: inline" action="pokazWszystkieDruzyny.jsp" method="get">
+           <button class="btn btn-default">Powrót</button>
+          </form>
+
          </div>
 </body>
 </html>

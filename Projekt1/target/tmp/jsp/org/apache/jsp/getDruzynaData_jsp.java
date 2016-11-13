@@ -42,8 +42,7 @@ public final class getDruzynaData_jsp extends org.apache.jasper.runtime.HttpJspB
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
-      out.write("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\r\n");
-      out.write("\"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
+      out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
@@ -92,7 +91,7 @@ public final class getDruzynaData_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\r\n");
       out.write("     <h3>Dodaj nową drużynę!</h3>\r\n");
       out.write("     <div class=\"container-fluid\">\r\n");
-      out.write("        <form action=\"addDruzyna.jsp\">\r\n");
+      out.write("        <form action=\"addDruzyna\">\r\n");
       out.write("\r\n");
       out.write("          <div class=\"form-group\">\r\n");
       out.write("            <label for=\"nazwaDruzyny\">Nazwa drużyny</label>\r\n");
@@ -112,7 +111,10 @@ public final class getDruzynaData_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("          </div>\r\n");
       out.write("          <button type=\"submit\" value=\"add\" class=\"btn btn-default\">Dodaj</button>\r\n");
       out.write("          </form>\r\n");
-      out.write("          <a href=\"pokazWszystkieDruzyny.jsp\"><button class=\"btn btn-default\">Powrót</button></a>\r\n");
+      out.write("          <form style=\"display: inline\" action=\"pokazWszystkieDruzyny.jsp\" method=\"get\">\r\n");
+      out.write("           <button class=\"btn btn-default\">Powrót</button>\r\n");
+      out.write("          </form>\r\n");
+      out.write("\r\n");
       out.write("         </div>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");

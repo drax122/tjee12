@@ -5,8 +5,7 @@
 <% int id = Integer.parseInt(request.getParameter("id"));
 Druzyna d = storage.All().get(id);
 pageContext.setAttribute("d", d);%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -47,14 +46,12 @@ pageContext.setAttribute("d", d);%>
                 <li class="list-group-item">Nazwa Druzyny: <%=d.getNazwaDruzyny()%></li>
                 <li class="list-group-item">Załozyciel: <%=d.getmZalozyciel()%></li>
                 <li class="list-group-item">Liczba graczy: <%=d.getLiczbaGraczy()%></li>
-                <li class"list-group-item">
-                <a href="editDruzyna.jsp?id=<%=id%>" title="Edytuj daną drużynę" type="button"
-                                                                             class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="addGraczGetData.jsp?id=<%=id%>" title="Dodaj nowego gracza" type="button"
-                                             class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></a>
-                <a href="removeDruzyna.jsp?id=<%=id%>" title="Usuń drużynę" type="button"
-                                              class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove"></span></a>
+                <li class="list-group-item">
 
+                <a href="editDruzyna.jsp?id=<%=id%>" title="Edytuj daną drużynę"  class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span></a>
+                <a href="addGraczGetData.jsp?id=<%=id%>" title="Dodaj nowego gracza" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></a>
+                <a href="removeDruzyna?id=<%=id%>" title="Usuń drużynę" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove"></span></a>
+                </li>
 
                 </ul>
             </div>
@@ -63,9 +60,12 @@ pageContext.setAttribute("d", d);%>
                 <div class="panel panel-default">
                          <div class="panel-heading">Lista graczy</div>
                      <table class="table"><tr>
-                        <th><h3 style="font-size: larger"><strong>Nickname</strong></h3></th>
-                        <th><h3 style="font-size: larger"><strong>Pensja</strong></h3></th>
-                        <th><h3 style="font-size: larger"><strong>Dywizja</strong></h3></th>
+                        <th><strong>Nickname</strong></th>
+                        <th><strong>Pensja</strong></th>
+                        <th><strong>Dywizja</strong></th>
+                        <th><strong>Edytuj gracza</strong></th>
+                        <th><strong>Usuń gracza</strong></th>
+                        <th><strong></strong></th>
                         </tr>
                         <c:forEach items="${d.getListaGraczy()}" var="listaGraczy" varStatus="loop">
                         <tr>
@@ -74,13 +74,13 @@ pageContext.setAttribute("d", d);%>
                             <td><h5 style="font-size: larger">${listaGraczy.getDywizja()} </h5></td>
                             <td><a title="Edytuj gracza"
                             href="editGracz.jsp?idGracz=<%=d.getListaGraczy().indexOf(pageContext.getAttribute("listaGraczy"))%>&idDruzyna=<%=id%>"
-                            type="button" class="btn btn-default btn-sm">
+                            class="btn btn-default btn-sm">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                             </a>
-                            <td>
+                            </td>
                             <td><a title="Usuń gracza"
-                            href="removeGracz.jsp?idGracz=<%=d.getListaGraczy().indexOf(pageContext.getAttribute("listaGraczy"))%>&idDruzyna=<%=id%>"
-                            type="button" class="btn btn-default btn-sm">
+                            href="removeGracz?idGracz=<%=d.getListaGraczy().indexOf(pageContext.getAttribute("listaGraczy"))%>&idDruzyna=<%=id%>"
+                            class="btn btn-default btn-sm">
                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                             </a>
                             <td>

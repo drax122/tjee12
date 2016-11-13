@@ -68,8 +68,7 @@ public final class getGraczData_jsp extends org.apache.jasper.runtime.HttpJspBas
     Druzyna d = storage.All().get(id);
     pageContext.setAttribute("d", d);
       out.write("\r\n");
-      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
-      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
@@ -98,7 +97,7 @@ public final class getGraczData_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <h2>Dodaj gracza do druzyny ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${d.nazwaDruzyny}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h2>\r\n");
-      out.write("            <form action=\"addGraczy.jsp\">\r\n");
+      out.write("            <form action=\"addGraczy\">\r\n");
       out.write("                ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
@@ -146,21 +145,21 @@ public final class getGraczData_jsp extends org.apache.jasper.runtime.HttpJspBas
           out.write("</label>\r\n");
           out.write("                    <input type=\"text\" class=\"form-control\" id=\"gracz");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(".Nickname\" name=\"gracz");
+          out.write("Nickname\" name=\"gracz");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write(".Nickname\" placeholder=\"Nickname Track");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">\r\n");
           out.write("                    <input type=\"text\" class=\"form-control\" id=\"gracz");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(".Pensja\" name=\"gracz");
+          out.write("Pensja\" name=\"gracz");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write(".Pensja\" placeholder=\"Pensja Track");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">\r\n");
           out.write("                    <input type=\"text\" class=\"form-control\" id=\"gracz");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(".Dywizja\" name=\"gracz");
+          out.write("\" name=\"gracz");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write(".Dywizja\" placeholder=\"Dywizja Track");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));

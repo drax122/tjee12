@@ -46,8 +46,7 @@ public final class editDruzyna_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\r\n");
-      out.write("   \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
+      out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       servlet.service.Storage storage = null;
       synchronized (application) {
@@ -80,7 +79,7 @@ public final class editDruzyna_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        ");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "boostrap.jsp", out, false);
       out.write("\r\n");
-      out.write("                <!-- Dorzucam grzecznie bootstrapa, bo lubie -->\r\n");
+      out.write("                <!-- bootstrap -->\r\n");
       out.write("        <title>Druzyny i gracze</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
@@ -90,7 +89,7 @@ public final class editDruzyna_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- Brand and toggle get grouped for better mobile display -->\r\n");
       out.write("        <div class=\"navbar-header\">\r\n");
       out.write("          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\"></button>\r\n");
-      out.write("          <a class=\"navbar-brand\" href=\"#\">Drużyny i gracze</a>\r\n");
+      out.write("          <a class=\"navbar-brand\" href=\"index.jsp\">Drużyny i gracze</a>\r\n");
       out.write("        </div>\r\n");
       out.write("        <ul class=\"nav navbar-nav\">\r\n");
       out.write("           <li><a href=\"pokazWszystkieDruzyny.jsp\">Drużyny</a></li>\r\n");
@@ -104,7 +103,7 @@ public final class editDruzyna_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\">\r\n");
       out.write("                <input type=\"hidden\" name=\"id\" value=\"");
       out.print(id);
-      out.write("\"/>\r\n");
+      out.write("\">\r\n");
       out.write("                <div class=\"form-group\">\r\n");
       out.write("                    <label for=\"nazwaDruzyny\">Nazwa drużyny</label>\r\n");
       out.write("                    <input type=\"text\" class=\"form-control\" id=\"nazwaDruzyny\" name=\"nazwaDruzyny\" value=\"");
@@ -131,9 +130,11 @@ public final class editDruzyna_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\r\n");
       out.write("                <button type=\"submit\" value=\"Edytuj\" class=\"btn btn-default\">Edytuj</button>\r\n");
       out.write("            </form>\r\n");
-      out.write("            <a href=\"DruzynaView.jsp?id=");
+      out.write("            <form style=\"display: inline\" action=\"DruzynaView.jsp?id=");
       out.print(id);
-      out.write("\"><button class=\"btn btn-default\">Wróć</button></a>\r\n");
+      out.write("\" method=\"get\">\r\n");
+      out.write("                                   <button class=\"btn btn-default\">Powrót</button>\r\n");
+      out.write("            </form>\r\n");
       out.write("        </div>\r\n");
       out.write("    </body>\r\n");
       out.write("</html>\r\n");

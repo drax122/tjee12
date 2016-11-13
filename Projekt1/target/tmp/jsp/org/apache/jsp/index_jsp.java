@@ -42,8 +42,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
-      out.write("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\r\n");
-      out.write("   \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
+      out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");

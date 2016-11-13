@@ -29,7 +29,6 @@ public class Test extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         response.setContentType("text/html");
-        out.println("Znalezne to:");
         int kontrola = 0;
         for(int i=0;i<ss.All().size();i++){
             if(ss.All().get(i).getNazwaDruzyny().equals(ID)) {

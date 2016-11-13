@@ -13,6 +13,11 @@ public class Storage {
         nowaDruzyna = new Druzyna(druzyna.getNazwaDruzyny(),druzyna.getmZalozyciel(),druzyna.getLiczbaGraczy(),s);
         db.add(nowaDruzyna);
     }
+    public void add_druzyna(String nazwa, String zal, int liczba, String link){
+        Druzyna nowaDruzyna;
+        nowaDruzyna = new Druzyna(nazwa,zal,liczba,link);
+        db.add(nowaDruzyna);
+    }
     public void dodajGracza(int id, Gracz gracz){
         db.get(id).getListaGraczy().add(gracz);
     }

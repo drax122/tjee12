@@ -100,7 +100,7 @@ public final class addGraczGetData_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        </ul>\r\n");
       out.write("      </div><!-- /.container-fluid -->\r\n");
       out.write("    </nav>\r\n");
-      out.write("        <form action=\"addGracz.jsp?id=");
+      out.write("        <form action=\"addGracz?id=");
       out.print(id);
       out.write("\">\r\n");
       out.write("          <input type=\"hidden\" name=\"id\" value=\"");

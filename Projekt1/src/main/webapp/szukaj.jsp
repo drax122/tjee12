@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <jsp:useBean id="storage" class="servlet.service.Storage" scope="application" />
 
 <html>
@@ -29,7 +28,7 @@
                 <label for="nazwaDruzyny">Nazwa drużyny</label>
                 <input type="text" class="form-control" id="nazwaDruzyny" name="nazwaDruzyny" placeholder="Druzyna, której szukasz">
               </div>
-              <button type="submit" value="add" class="btn btn-default">Dodaj</button>
+              <button type="submit" value="add" class="btn btn-default">Szukaj</button>
     </form>
     </div>
     </body>

@@ -64,7 +64,7 @@ public final class pokazWszystkieDruzyny_jsp extends org.apache.jasper.runtime.H
         }
       }
       out.write("\r\n");
-      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
+      out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");

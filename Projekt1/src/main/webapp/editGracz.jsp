@@ -1,8 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="servlet.serv.Druzyna" %>
 <%@ page import="servlet.serv.Gracz" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:useBean id="storage" class="servlet.service.Storage" scope="application" />
 <jsp:useBean id="druzyna" class="servlet.serv.Druzyna" scope="session" />

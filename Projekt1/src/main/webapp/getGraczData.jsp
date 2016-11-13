@@ -5,8 +5,7 @@
 <% int id = Integer.parseInt(request.getParameter("id"));
     Druzyna d = storage.All().get(id);
     pageContext.setAttribute("d", d);%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -31,12 +30,12 @@
     </nav>
      <div class="container-fluid">
         <h2>Dodaj gracza do druzyny ${d.nazwaDruzyny}</h2>
-            <form action="addGraczy.jsp">
+            <form action="addGraczy">
                 <c:forEach var="i" begin="1" end="${d.liczbaGraczy}">
                     <label for="gracz${i}">Gracz ${i}</label>
-                    <input type="text" class="form-control" id="gracz${i}.Nickname" name="gracz${i}.Nickname" placeholder="Nickname Track${i}">
-                    <input type="text" class="form-control" id="gracz${i}.Pensja" name="gracz${i}.Pensja" placeholder="Pensja Track${i}">
-                    <input type="text" class="form-control" id="gracz${i}.Dywizja" name="gracz${i}.Dywizja" placeholder="Dywizja Track${i}">
+                    <input type="text" class="form-control" id="gracz${i}Nickname" name="gracz${i}.Nickname" placeholder="Nickname Track${i}">
+                    <input type="text" class="form-control" id="gracz${i}Pensja" name="gracz${i}.Pensja" placeholder="Pensja Track${i}">
+                    <input type="text" class="form-control" id="gracz${i}" name="gracz${i}.Dywizja" placeholder="Dywizja Track${i}">
                 </c:forEach>
                 <button type="submit" value="add" class="btn btn-default">Dodaj</button>
             </form>
