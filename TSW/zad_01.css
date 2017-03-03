@@ -1,0 +1,31 @@
+.borderA {
+  border: solid 5px red;
+}
+.borderB {
+  border: solid 5px blue;
+}
+.A {
+  border: solid 5px red;
+  text-align: center;
+  background-color: yellow;
+  position: absolute;
+  left: 30%;
+  right: 50%;
+  top: 30%;
+  width: 20%;
+  height: 20%;
+}
+.B {
+  border: solid 5px blue;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 40%;
+  top: 40%;
+  vertical-align: middle;
+}
+.text-center {
+  text-align: center;
+}
